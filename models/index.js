@@ -1,3 +1,4 @@
+//Sequelize model used for connecting the models and using config.json
 'use strict';
 
 const fs = require('fs');
