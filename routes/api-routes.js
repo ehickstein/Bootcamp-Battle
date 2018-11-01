@@ -11,6 +11,13 @@ module.exports = function(app) {
         });
     });
 
+    //Used to get all enemies
+    app.get("/api/enemies", (req, res) => {
+        db.Enemy.findAll({}).then((dbEnemies) => {
+            res.json(dbEnemies);
+        });
+    });
+
     //Used to get one user by ID
     app.get("/api/users/:id", (req, res) => {
         db.User.findOne({
@@ -19,6 +26,17 @@ module.exports = function(app) {
             }
         }).then((oneUser) => {
             res.json(oneUser);
+        });
+    });
+
+    //Used to get one enemy by ID
+    app.get("/api/enemies/:id", (req, res) => {
+        db.Enemy.findOne({
+            where: {
+                id: req.params.id
+            }
+        }).then((oneEnemy) => {
+            res.json(oneEnemy);
         });
     });
 
