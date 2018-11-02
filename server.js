@@ -23,7 +23,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Static directory
-app.use(express.static("public"));
+// app.use(express.static("public"));
+app.use(express.static("dist"));
 
 // Routes
 // =============================================================
