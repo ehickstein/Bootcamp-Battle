@@ -4,8 +4,8 @@ import update from "./update.js";
 import preload from "./preload.js";
 const engineConfig = {
   type: Phaser.AUTO,
-  width: 600,
-  height: 400,
+  width: 675,
+  height: 499,
   parent: 'gameWindow',
   physics: {
     default: "arcade",
