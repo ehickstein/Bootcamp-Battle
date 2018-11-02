@@ -7,5 +7,15 @@ module.exports = (sequelize, DataTypes) => {
     stat2: DataTypes.INTEGER,
     stat3: DataTypes.INTEGER
   }, {});
+
+  //Defining the association between the Enemy model and the Game model
+  Enemy.associate = (models) => {
+    Enemy.belongsTo(models.Game, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return Enemy;
 };
