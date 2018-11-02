@@ -37,3 +37,15 @@ body {
     margin-right: 19%;
     position: absolute;
 }
+#startImage{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#welcome{
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+    font-size: 32px;
+}
