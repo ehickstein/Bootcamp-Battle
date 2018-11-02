@@ -25,13 +25,7 @@
     "express": "^4.16.4",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",
-<<<<<<< HEAD
-    "parcel": "^1.10.3",
-    "phaser": "^3.15.1",
-    "phaser-ce": "^2.11.1",
-=======
     "phaser": "3.14.0",
->>>>>>> f728d38e195cfee75620e92bdfb30a928d34cbb5
     "sequelize": "^4.41.0"
   },
   "devDependencies": {
