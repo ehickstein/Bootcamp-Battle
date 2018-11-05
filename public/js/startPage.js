@@ -23,6 +23,6 @@ $(document).ready(function() {
             });
         };
 
-    }).then(window.location.href = "/session")
+    })
 
 });
