@@ -1,17 +1,23 @@
 body {
     background-image: url(https://akimg0.ask.fm/wallpapers/218/593/383/original/matrix2.jpg);
 }
-#pageTitle{
-    background-color: black;
+#endGameDiv{
     font-family: 'Exo 2', sans-serif;
-    color: #fb2e01;
-    text-align: center;
-    width: 100%;
-    height: 150px;
+    background-color: black;
+    border: 10px solid grey;
+    color: #00FF41;
+    width: 40%;
+    height: auto;
     display: block;
-    margin-left: 0px;
-    margin-right: 0px;
-   
+    margin-left: auto;
+    margin-right: auto;
+}
+#titleImage{
+    width: 30%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #gameWindow{
     background-color: lightblue;
@@ -19,7 +25,7 @@ body {
     height: 500px;
     margin-left: 25%;
     margin-right: 25%;
-    margin-top: 85px;
+    margin-top: 110px;
     position: relative;
 }
 #gameImageTest{
@@ -28,7 +34,7 @@ body {
 }
 #gameDesc{
     font-family: 'Exo 2', sans-serif;
-    color: #00FF41;
+    color: white;
     text-shadow: 1.5px 0 0 black;
     font-size: 24px;
     text-align: center;
@@ -42,16 +48,4 @@ body {
     margin-left: 18%;
     margin-right: 19%;
     position: absolute;
-}
-#startImage{
-    width: 40%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-#welcome{
-    font-family: 'Sacramento', cursive;
-    text-align: center;
-    font-size: 32px;
 }
