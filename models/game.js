@@ -1,7 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Game = sequelize.define('Game', {
-    gameID: DataTypes.INTEGER,
+    userId: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV1,
+    },
     score: DataTypes.INTEGER
   }, {});
   Game.associate = function(models) {
