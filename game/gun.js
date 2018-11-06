@@ -51,6 +51,6 @@ export const shootGun = ({ fromX, fromY, toX, toY, enemy }) => {
     }
   });
 
-  setTimeout(() => bullet.destroy(), 1500);
+  setTimeout(() => bullet.destroy(), 2000);
   return bullet
 };
