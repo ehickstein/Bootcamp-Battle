@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV1,
     },
-    score: DataTypes.INTEGER
+    score: DataTypes.INTEGER,
+    time: DataTypes.BIGINT
   }, {});
   Game.associate = function(models) {
     Game.hasMany(models.Enemy, {
