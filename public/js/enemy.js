@@ -14,6 +14,6 @@ export const createEnemy = scene => {
   enemy = scene.add.rectangle(300, 300, 20, 20, 0x66ffff);
   enemy.health = 100;
   physicsGroup.add(enemy);
-
+  
   return enemy;
 };
