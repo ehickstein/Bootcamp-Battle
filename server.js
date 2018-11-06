@@ -24,12 +24,15 @@ app.use(bodyParser.json());
 
 // Static directory
 app.use(express.static("public"));
-app.use(express.static("dist"));
+// app.use();
 
 // Routes
 // =============================================================
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+// const game = require('./routes/catchall');
+
+app.use(express.static("dist"))
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

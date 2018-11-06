@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "start:phaser": "parcel public/index.html --open",
+    "start:phaser": "parcel public/index.html --open & NODE_ENV=development nodemon server.js",
     "build": "parcel build public/index.html"
   },
   "repository": {
@@ -23,6 +23,8 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "express-http-proxy": "^1.4.0",
+    "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",
     "phaser": "3.14.0",
@@ -31,5 +33,6 @@
   },
   "devDependencies": {
     "cssnano": "^4.1.7"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
