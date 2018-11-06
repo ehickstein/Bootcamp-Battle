@@ -11,9 +11,15 @@ export const createEnemy = scene => {
     dragX: 6000,
     dragY: 6000
   });
-  enemy = scene.add.rectangle(300, 300, 20, 20, 0x66ffff);
-  enemy.health = 100;
+  // for(let i=0;i<10;i++){
+  //   var x = Math.floor((Math.random() * 500) + 1);
+  //   var y = Math.floor((Math.random() * 500) + 1);
+  
+
+  enemy = scene.add.rectangle(100, 200, 20, 20, 0x66ffff);
+  enemy.health = 10;
   physicsGroup.add(enemy);
 
   return enemy;
+  // }
 };
