@@ -88,11 +88,22 @@ module.exports = function(app) {
         db.Game.update({
             score: req.body.score,
             where: {
-                gameId: req.body.gameId
+                id: req.body.gameId
             }
         }).then((updateGame) => {
             res.json(updateGame);
         });
     });
 
+    //UPDATE enemy stat1 with a specific game ID
+    app.put("/enemy", (req, res) => {
+        db.Enemy.update({
+            stat1: req.body.stat1,
+            where: {
+                gameId: req.body.gameId
+            }
+        }).then(updateEnemy => {
+            res.json(updateEnemy);
+        });
+    });
 };

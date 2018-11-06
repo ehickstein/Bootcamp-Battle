@@ -1,11 +1,11 @@
-{
+module.exports = {
   "development": {
     "username": "root",
     "password": "root",
     "database": "boot_battle_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "port": 8889
+    "port": 8889,
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
@@ -15,10 +15,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }

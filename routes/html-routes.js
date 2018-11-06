@@ -5,10 +5,11 @@ const path = require("path");
 module.exports = function(app) {
 
     app.get("/", (req, res) => {
+        console.log("Hit the /start route@");
         res.sendFile(path.join(__dirname, "../public/start.html"));
     })
     
     app.get("/session", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
+        res.sendFile(path.join(__dirname, "../dist/index.html"));
     })
 };
