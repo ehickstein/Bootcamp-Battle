@@ -95,6 +95,18 @@ module.exports = function(app) {
         });
     });
 
+    //UPDATE the game time stat with a specific game object
+    app.put("/time", (req, res) => {
+        db.Game.update({
+            time: req.body.time,
+            where: {
+                id: req.body.gameId
+            }
+        }).then((updateTime) => {
+            res.json(updateTime);
+        });
+    });
+
     //UPDATE enemy stat1 with a specific game ID
     app.put("/enemy", (req, res) => {
         db.Enemy.update({
