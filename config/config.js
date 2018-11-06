@@ -1,11 +1,11 @@
-{
+module.exports = {
   "development": {
     "username": "root",
     "password": "root",
     "database": "boot_battle_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "port": 8889
+    "port": 8889,
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
@@ -15,11 +15,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "i2l9aosfyvs44l3k",
-    "password": "yi26o28rneqqrxio",
-    "database": "w5y7mlekr9jcvojc",
-    "host": "m7wltxurw8d2n21q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "port": 3306
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
