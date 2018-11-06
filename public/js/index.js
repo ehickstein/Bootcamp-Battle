@@ -4,7 +4,7 @@ import update from "./update.js";
 import preload from "./preload.js";
 const engineConfig = {
   type: Phaser.AUTO,
-  width: 675,
+  width: 800,
   height: 499,
   parent: 'gameWindow',
   physics: {
