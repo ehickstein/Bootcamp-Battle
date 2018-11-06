@@ -4,7 +4,7 @@ const path = require("path");
 //Routes
 module.exports = function(app) {
 
-    app.get("/start", (req, res) => {
+    app.get("/", (req, res) => {
         console.log("Hit the /start route@");
         res.sendFile(path.join(__dirname, "../public/start.html"));
     })
