@@ -1,2 +1,2 @@
 # Bootcamp-Battle
-Heroku deployed version here: (https://sheltered-sea-54135.herokuapp.com/ "Link")
+Heroku deployed version here:[Link](https://sheltered-sea-54135.herokuapp.com/)
