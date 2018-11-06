@@ -8,12 +8,12 @@ export const createEnemy = scene => {
     bounceX: 1,
     bounceY: 1,
     collideWorldBounds: true,
-    dragX: 6000,
-    dragY: 6000
+    dragX: 40,
+    dragY: 40
   });
-  enemy = scene.add.rectangle(300, 300, 20, 20, 0x66ffff);
+  enemy = scene.add.sprite(200, 300, "mushroom");
   enemy.health = 100;
   physicsGroup.add(enemy);
-
+  
   return enemy;
 };

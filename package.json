@@ -33,6 +33,7 @@
     "mysql2": "^1.6.1",
     "parcel": "^1.10.3",
     "phaser": "3.14.0",
+    "preload.js": "^1.0.0",
     "sequelize": "^4.41.0"
   },
   "devDependencies": {
