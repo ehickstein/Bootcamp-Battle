@@ -46,7 +46,6 @@ class InputManager {
   handleUpdate() {
     Object.keys(this.bindings).forEach(key => {
       if (this.bindings[key].isDown) {
-        console.log(key, this.bindings[key].isDown);
         const currentKey = this.keys.find(({ name }) => name === key);
         updatePlayerPosition(currentKey.velocityX, currentKey.velocityY);
       }
