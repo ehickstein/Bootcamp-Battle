@@ -1,5 +1,4 @@
 import { createGun, shootGun } from "./gun";
-
 let player = null;
 let physicsGroup = null;
 let globalEnemy = null;
@@ -20,10 +19,11 @@ export const createPlayer = ({ scene, enemy }) => {
     dragX: 40,
     dragY: 40
   });
-  player = scene.add.circle(200, 200, 10, 0x6666ff);
+  player = scene.add.sprite(100, 200, "beball");
   physicsGroup.add(player);
 
   createGun(scene);
+  return player
 };
 
 export const updatePlayerPosition = (velocityX, velocityY) => {
