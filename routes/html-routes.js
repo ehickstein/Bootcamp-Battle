@@ -4,8 +4,15 @@ const path = require("path");
 //Routes
 module.exports = function(app) {
 
-    app.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
+    app.get("/start", (req, res) => {
+        console.log("Hit the /start route@");
+        res.sendFile(path.join(__dirname, "../public/start.html"));
     })
-    app.get("/")
+    
+    app.get("/session", (req, res) => {
+        res.sendFile(path.join(__dirname, "../dist/index.html"));
+    })
+    app.get("/end", (req,res) => {
+        res.sendFile(path.join(__dirname, "../public/end.html"));
+    })
 };

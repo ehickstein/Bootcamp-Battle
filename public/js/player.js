@@ -24,6 +24,7 @@ export const createPlayer = ({ scene, enemy }) => {
   physicsGroup.add(player);
 
   createGun(scene);
+  return
 };
 
 export const updatePlayerPosition = (velocityX, velocityY) => {

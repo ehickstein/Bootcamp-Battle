@@ -10,8 +10,9 @@ const engineConfig = {
   physics: {
     default: "arcade",
     arcade: {
-      // gravity: { y: 200 },
+      // gravity: { y: 200},
     }
+    
   },
   scene: {
     preload,
@@ -21,3 +22,15 @@ const engineConfig = {
 };
 
 const game = new Phaser.Game(engineConfig);
+
+        document.onload(()=>{
+          timer:{
+            var myVar = setInterval(myTimer, 1000);
+            function myTimer() {
+              if(gameEnd=false)
+
+              console.log("")
+            }
+                
+            }
+        })     

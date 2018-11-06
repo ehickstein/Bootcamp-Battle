@@ -6,4 +6,7 @@ export default function() {
   const enemy = createEnemy(this);
   createPlayer({ scene: this, enemy });
   setupListeners(this);
+  this.addImage(400,300, "bg.png")
+        
+	
 }
