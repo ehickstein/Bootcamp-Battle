@@ -1,9 +1,10 @@
 module.exports = {
   "development": {
-    "username": process.env.MYSQL_USERNAME,
-    "password": process.env.MYSQL_PASSWORD,
-    "database": process.env.MYSQL_DATABASE,
-    "host": process.env.MYSQL_HOST,
+    "username": "root",
+    "password": "root",
+    "database": "boot_battle_db",
+    "host": "127.0.0.1",
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
@@ -14,7 +15,7 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "mysql://i2l9aosfyvs44l3k:yi26o28rneqqrxio@m7wltxurw8d2n21q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/w5y7mlekr9jcvojc",
+    "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
 }
