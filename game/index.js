@@ -21,3 +21,34 @@ const engineConfig = {
 };
 
 const game = new Phaser.Game(engineConfig);
+
+$(document).ready(function() {
+  var timer=0;
+  var gameEnd=false;
+  var gameTimer = setInterval(myTimer, 1000);
+  function myTimer() {
+    timer++;
+
+    if (gameEnd===false) {
+      console.log("time is"+timer);
+    };
+    if(gameEnd===true) {
+      clearInterval(myTimer)
+      console.log("The game is over and your time is: "+timer)
+      var localUserId = localStorage.getItem("userId");
+      $.ajax({
+        method: "GET",
+        url: "/game",
+        data: {userId: localUserId}
+      }).then(getResult => {
+        $.ajax({
+          method: "PUT",
+          url: "/time",
+          data: {time: timer} && {gameId: getResult.id}
+        }).then(putResult => {
+          console.log(putResult);
+        });
+      });
+    }
+  };
+});
