@@ -106,4 +106,7 @@ module.exports = function(app) {
             res.json(updateEnemy);
         });
     });
+
+    //UPDATE game timer with spefic game ID
+    app.put("/time")
 };

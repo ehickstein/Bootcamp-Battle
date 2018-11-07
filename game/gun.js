@@ -12,10 +12,10 @@ export const createGun = scene => {
 
 export const shootGun = ({ fromX, fromY, toX, toY, enemy }) => {
   // draw the bullet
-  const bullet = globalScene.add.circle(fromX, fromY, 5, 0xff66ff);
+  const bullet = globalScene.add.sprite(fromX, fromY, "bullet");
   const physicsGroup = globalScene.physics.add.group({
-    angularDrag: 5,
-    angularVelocity: 60,
+    // angularDrag: 5,
+    // angularVelocity: 60,
     collideWorldBounds: true,
     dragX: 10,
     dragY: 10
@@ -28,7 +28,6 @@ export const shootGun = ({ fromX, fromY, toX, toY, enemy }) => {
   const velocityX = (SPEED / d) * (toX - fromX);
   const velocityY = (SPEED / d) * (toY - fromY);
   physicsGroup.setVelocity(velocityX, velocityY);
-
   globalScene.physics.add.collider(enemy, physicsGroup, () => {
     bullet.destroy();
     enemy.health -= 10;
@@ -52,5 +51,6 @@ export const shootGun = ({ fromX, fromY, toX, toY, enemy }) => {
     }
   });
 
-  setTimeout(() => bullet.destroy(), 1000);
+  setTimeout(() => bullet.destroy(), 1500);
+  return bullet
 };

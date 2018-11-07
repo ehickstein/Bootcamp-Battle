@@ -1,5 +1,4 @@
 import { createGun, shootGun } from "./gun";
-
 let player = null;
 let physicsGroup = null;
 let globalEnemy = null;
@@ -14,17 +13,17 @@ export const createPlayer = ({ scene, enemy }) => {
   physicsGroup = scene.physics.add.group({
     // Initial angular speed of 60 degrees per second.
     // Drag reduces it by 5 degrees/s per second, thus to zero after 12 seconds.
-    bounceX: 1,
-    bounceY: 1,
+    bounceX: .3,
+    bounceY: .3,
     collideWorldBounds: true,
     dragX: 40,
     dragY: 40
   });
-  player = scene.add.circle(200, 200, 10, 0x6666ff);
+  player = scene.add.sprite(100, 200, "beball");
   physicsGroup.add(player);
 
   createGun(scene);
-  return
+  return player
 };
 
 export const updatePlayerPosition = (velocityX, velocityY) => {

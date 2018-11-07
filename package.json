@@ -1,13 +1,17 @@
 {
   "name": "Bootcamp-Battle",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.10.0"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "start:phaser": "parcel public/index.html --open & NODE_ENV=development nodemon server.js",
-    "build": "parcel build public/index.html"
+    "build": "parcel build public/index.html",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,7 +31,9 @@
     "jquery": "^3.3.1",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",
+    "parcel": "^1.10.3",
     "phaser": "3.14.0",
+    "preload.js": "^1.0.0",
     "sequelize": "^4.41.0"
   },
   "devDependencies": {
